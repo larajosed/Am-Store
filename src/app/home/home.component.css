@@ -1,0 +1,42 @@
+.hero{
+   background-image: url('../../assets/images/IMG_20220224_224807_312.jpg');
+    background-color: #999;
+    background-blend-mode: multiply;
+    height: 300px;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    font-family: Alfa Slab One;
+    font-size: 50px;
+    color: #fff;
+    margin-top: 30px;
+    max-width: 600px;
+    letter-spacing: 2px;
+
+}
+
+/* inicio footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 0.25em 0.625em;
+    text-align: right;
+}
+
+footer a {
+    color:white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgb(241, 121, 0);
+}
