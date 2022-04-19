@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../models/Product.model';
-import { ProductsService } from '../service/products.service';
+import { ProductsCarouselComponent } from '../products-carousel/products-carousel.component';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +7,9 @@ import { ProductsService } from '../service/products.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  arrProducts: Product[];
 
-  constructor(private productsService: ProductsService) {
-    this.arrProducts = []
-  }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.productsService.getRandomProducts().then(res => {
-      console.log(res);
-      this.arrProducts = res.products
-    })
-  }
+  ngOnInit(): void { }
 
 }
