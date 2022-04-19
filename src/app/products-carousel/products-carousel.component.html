@@ -1,1 +1,7 @@
-<p>products-carousel works!</p>
+<div class="body products-flex-container">
+    <div class="products" *ngFor="let product of arrProducts">
+        <img src={{product.image.imageUrl}} alt="">
+        <h1>{{ product.description.name }}</h1>
+        <p>{{product.price}}$</p>
+    </div>
+</div>
