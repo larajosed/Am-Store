@@ -1,1 +1,9 @@
-<p>product-detail works!</p>
+<div class="carousel">
+    <ngb-carousel *ngIf="productDetail.images.length > 0">
+        <ng-template *ngFor="let image of productDetail.images" ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="image.imageUrl" [alt]="image.imageName">
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>

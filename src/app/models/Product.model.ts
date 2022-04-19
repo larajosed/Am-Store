@@ -8,6 +8,7 @@ export class Product {
     categories: Array<Category>
     description: Description;
     image: Image;
+    images: Array<Image>
 
     constructor() {
         this.id = 0;
@@ -15,6 +16,7 @@ export class Product {
         this.categories = []
         this.description = new Description();
         this.image = new Image();
+        this.images = [];
     }
 
 }

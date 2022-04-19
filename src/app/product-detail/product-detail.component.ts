@@ -25,9 +25,6 @@ export class ProductDetailComponent implements OnInit {
       }
       this.productService.getDetailProduct(friendlyUrl).then(res => {
         this.productDetail = res
-
-        console.log(this.productDetail);
-
       })
 
     })
