@@ -17,7 +17,6 @@ export class ProductsCarouselComponent implements OnInit {
 
   ngOnInit(): void {
     this.productsService.getRandomProducts().then(res => {
-      console.log(res);
       this.arrProducts = res.products
     })
   }
