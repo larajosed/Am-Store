@@ -9,6 +9,7 @@ import { ProductsCarouselComponent } from './products-carousel/products-carousel
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CategoriesMenuComponent } from './categories-menu/categories-menu.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MenuComponent,
     FooterComponent,
     ProductsCarouselComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    CategoriesMenuComponent
   ],
   imports: [
     BrowserModule,

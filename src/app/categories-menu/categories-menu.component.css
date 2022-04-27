@@ -1,0 +1,17 @@
+.list_categories {
+    list-style: none;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.categories {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.categories:hover {
+    color: rgb(186, 178, 178);
+}
