@@ -1,7 +1,9 @@
 <div class="body products-flex-container">
-    <div class="products" *ngFor="let product of arrProducts">
-        <img src={{product.image.imageUrl}} alt="">
-        <h1>{{ product.description.name }}</h1>
-        <p>{{product.price}}$</p>
-    </div>
+    <a routerLink="/product/{{product.description.friendlyUrl}}" *ngFor="let product of arrProducts">
+        <div class="products">
+            <div class="thumbnail" style="background-image: url('{{product.image.imageUrl}}')" alt=""></div>
+            <h1>{{ product.description.name }}</h1>
+            <p>$ {{product.price}}</p>
+        </div>
+    </a>
 </div>
