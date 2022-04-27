@@ -1,13 +1,11 @@
+import { Description } from "./Description.models";
+
 export class Category {
-    description: string;
-    name: string;
-    title: string;
+    description: Description;
 
 
     constructor(category: Category) {
-        this.description = "";
-        this.name = "";
-        this.title = "";
+        this.description = new Description();
     }
 
 }
