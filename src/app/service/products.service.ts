@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { AppSettings } from '../app.settings';
 
@@ -20,5 +20,11 @@ export class ProductsService {
 
   getDetailProduct(friendlyUrl: string): Promise<any> {
     return firstValueFrom(this.httpClient.get(`${this.Url}products/slug/${friendlyUrl}`))
+  }
+
+  getByCategory(categoryId: number) {
+    let params = new HttpParams();
+    params.set("category", categoryId);
+    return firstValueFrom(this.httpClient.get(`${this.Url}products`, { params }));
   }
 }

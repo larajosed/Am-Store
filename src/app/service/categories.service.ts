@@ -16,4 +16,9 @@ export class CategoriesService {
   getCategories(): Promise<any> {
     return firstValueFrom(this.httpClient.get(`${this.Url}category`))
   }
+
+  getCategoryByFriendlyUrl(friendlyUrl: string): Promise<any> {
+    return firstValueFrom(this.httpClient.get(`${this.Url}category/name/${friendlyUrl}`))
+  }
+
 }
