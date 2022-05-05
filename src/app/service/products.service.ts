@@ -22,9 +22,9 @@ export class ProductsService {
     return firstValueFrom(this.httpClient.get(`${this.Url}products/slug/${friendlyUrl}`))
   }
 
-  getByCategory(categoryId: number) {
-    let params = new HttpParams();
-    params.set("category", categoryId);
-    return firstValueFrom(this.httpClient.get(`${this.Url}products`, { params }));
+  getByCategory(categoryId: number): Promise<any> {
+    let parameters = new HttpParams();
+    parameters = parameters.set('category', categoryId);
+    return firstValueFrom(this.httpClient.get(`${this.Url}products`, { params: parameters }));
   }
 }
