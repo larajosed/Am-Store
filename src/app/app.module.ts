@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoriesMenuComponent } from './categories-menu/categories-menu.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CategoriesMenuComponent } from './categories-menu/categories-menu.compo
     FooterComponent,
     ProductsCarouselComponent,
     ProductDetailComponent,
-    CategoriesMenuComponent
+    CategoriesMenuComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

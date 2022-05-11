@@ -19,7 +19,6 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(paramMap => {
       let friendlyUrl = paramMap.get('friendlyUrl');
-      console.log(friendlyUrl);
       if (friendlyUrl == null) {
         return
       }

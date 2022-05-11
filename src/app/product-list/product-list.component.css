@@ -1,0 +1,54 @@
+.products-flex-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.products-flex-container a {
+    text-decoration: none;
+    margin-top: 1px solid black;
+}
+
+
+.products {
+    text-align: center;
+    margin: 15px;
+    display: inline-block;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    color: black;
+    border-radius: 15px;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.products h1 {
+    border-bottom: 1px solid black;
+    font-size: 30px;
+    padding: 5px;
+    margin-top: 20px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.products:hover {
+    box-shadow: 0px 10px 20px rgb(151, 155, 159);
+    background-color: rgb(241, 241, 241);
+    transition: 1s;
+}
+
+.products p {
+    font-size: 20px;
+}
+
+.products .thumbnail {
+    height: 150px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
