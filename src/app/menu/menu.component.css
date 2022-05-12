@@ -1,0 +1,6 @@
+.cart {
+    justify-content: right;
+    align-items: right;
+    display: inline-block;
+    margin-right: 5px;
+}

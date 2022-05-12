@@ -11,6 +11,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoriesMenuComponent } from './categories-menu/categories-menu.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { CarWidgetComponent } from './car-widget/car-widget.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProductListComponent } from './product-list/product-list.component';
     ProductsCarouselComponent,
     ProductDetailComponent,
     CategoriesMenuComponent,
-    ProductListComponent
+    ProductListComponent,
+    CarWidgetComponent
   ],
   imports: [
     BrowserModule,
