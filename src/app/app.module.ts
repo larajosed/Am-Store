@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoriesMenuComponent } from './categories-menu/categories-menu.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CarWidgetComponent } from './car-widget/car-widget.component';
+import { CartDetailComponent } from './cart-detail/cart-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CarWidgetComponent } from './car-widget/car-widget.component';
     ProductDetailComponent,
     CategoriesMenuComponent,
     ProductListComponent,
-    CarWidgetComponent
+    CarWidgetComponent,
+    CartDetailComponent
   ],
   imports: [
     BrowserModule,
