@@ -38,7 +38,7 @@ export class CartService {
     if (cartCode == null) {
       return firstValueFrom(this.httpClient.post(`${this.Url}cart`, product))
     } else {
-      return firstValueFrom(this.httpClient.put(`${this.Url}cart/{code}`, product))
+      return firstValueFrom(this.httpClient.put(`${this.Url}cart/${cartCode}`, product))
     }
 
   }

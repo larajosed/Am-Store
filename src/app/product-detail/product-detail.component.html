@@ -15,7 +15,12 @@
         <h1>{{ productDetail.description.name }}</h1>
         <p>{{ productDetail.description.description }}</p>
         <p>{{productDetail.price}}$</p>
-
-        <input type="submit" class="btn btn-dark" value="Agregar al carrito" (click)="addToCart(productDetail.id)">
+        <select name="quantity" id="" [(ngModel)]="selectedQuantity">
+            <option [value]="quantity" *ngFor="let quantity of quantities">
+                {{quantity}}
+            </option>
+        </select>
+        <input type="submit" class="btn btn-dark" value="Agregar al carrito"
+            (click)="addToCart(productDetail.id, selectedQuantity)">
     </div>
 </div>

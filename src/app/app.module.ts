@@ -13,6 +13,8 @@ import { CategoriesMenuComponent } from './categories-menu/categories-menu.compo
 import { ProductListComponent } from './product-list/product-list.component';
 import { CarWidgetComponent } from './car-widget/car-widget.component';
 import { CartDetailComponent } from './cart-detail/cart-detail.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { CartDetailComponent } from './cart-detail/cart-detail.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

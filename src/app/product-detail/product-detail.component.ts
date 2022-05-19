@@ -14,11 +14,14 @@ export class ProductDetailComponent implements OnInit {
 
   productDetail: Product;
   router: any;
-
+  quantities: Array<number>;
+  selectedQuantity: number;
 
 
   constructor(private productService: ProductsService, private cartService: CartService, private route: ActivatedRoute) {
     this.productDetail = new Product();
+    this.quantities = []
+    this.selectedQuantity = 0;
   }
 
   ngOnInit(): void {
@@ -28,15 +31,23 @@ export class ProductDetailComponent implements OnInit {
         return
       }
       this.productService.getDetailProduct(friendlyUrl).then(res => {
-        this.productDetail = res
+        this.productDetail = res;
+
+        this.productDetail.quantityOrderMaximum = 5;
+
+        var [min, max] = this.productService.getQuantityProduct(this.productDetail);
+        for (let i = min; i <= max; i++) {
+          this.quantities.push(i)
+        }
+        this.selectedQuantity = min
       })
     })
   }
 
-  addToCart(productId: number): void {
+  addToCart(productId: number, quantity: number): void {
     var product = new PersistableShoppingCartItem();
     product.product = productId;
-    product.quantity = 1;
+    product.quantity = quantity;
     this.cartService.addProductToCart(product).then(res => {
       this.cartService.saveCodeCart(res.code)
 

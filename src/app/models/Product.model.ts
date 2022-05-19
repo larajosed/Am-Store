@@ -8,7 +8,10 @@ export class Product {
     categories: Array<Category>
     description: Description;
     image: Image;
-    images: Array<Image>
+    images: Array<Image>;
+    quantity: number;
+    quantityOrderMaximum: number;
+    quantityOrderMinimum: number;
 
     constructor() {
         this.id = 0;
@@ -17,6 +20,9 @@ export class Product {
         this.description = new Description();
         this.image = new Image();
         this.images = [];
+        this.quantity = 0;
+        this.quantityOrderMaximum = 0;
+        this.quantityOrderMinimum = 0;
     }
 
 }

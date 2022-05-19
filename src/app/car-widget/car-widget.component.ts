@@ -7,7 +7,9 @@ import { CartService } from '../service/cart.service';
   styleUrls: ['./car-widget.component.css']
 })
 export class CarWidgetComponent implements OnInit {
+
   productNumber: Number;
+
   constructor(private cartService: CartService) {
     this.productNumber = 0
   }
@@ -16,7 +18,7 @@ export class CarWidgetComponent implements OnInit {
     var optionalPromise = this.cartService.retrieveCartData();
     if (optionalPromise !== null) {
       optionalPromise.then(res => {
-        this.productNumber = res.products.length
+        this.productNumber = res.quantity;
       })
     }
   }
