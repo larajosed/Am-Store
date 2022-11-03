@@ -11,8 +11,13 @@ import { updateArticlesNumber } from '../update.actions';
   styleUrls: ['./car-widget.component.css']
 })
 export class CarWidgetComponent implements OnInit {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+
+>>>>>>> feature/purchase
   productNumber: Number;
+
   constructor(private cartService: CartService) {
     this.productNumber = 0
 =======
@@ -30,11 +35,15 @@ export class CarWidgetComponent implements OnInit {
     var optionalPromise = this.cartService.retrieveCartData();
     if (optionalPromise !== null) {
       optionalPromise.then(res => {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         this.productNumber = res.products.length
 =======
         this.storeArticlesQuantity.dispatch(updateArticlesNumber({ articlesQuantity: res.quantity }));
 >>>>>>> Stashed changes
+=======
+        this.productNumber = res.quantity;
+>>>>>>> feature/purchase
       })
     }
   }

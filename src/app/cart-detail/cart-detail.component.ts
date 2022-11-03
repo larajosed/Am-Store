@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { Cart } from '../models/Cart.model';
 import { CartService } from '../service/cart.service';
 import { Product } from '../models/Product.model';
 import { Store } from '@ngrx/store';
 import { ArticlesInCartNumberInterface } from '../interface/update-shopping-car';
+=======
+>>>>>>> feature/purchase
 
 @Component({
   selector: 'app-cart-detail',
@@ -11,6 +14,7 @@ import { ArticlesInCartNumberInterface } from '../interface/update-shopping-car'
   styleUrls: ['./cart-detail.component.css']
 })
 export class CartDetailComponent implements OnInit {
+<<<<<<< HEAD
   cart: Cart
 
 
@@ -24,6 +28,12 @@ export class CartDetailComponent implements OnInit {
       this.cart = res;
     })
 
+=======
+
+  constructor() { }
+
+  ngOnInit(): void {
+>>>>>>> feature/purchase
   }
 
 }

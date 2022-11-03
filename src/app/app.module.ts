@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoriesMenuComponent } from './categories-menu/categories-menu.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CarWidgetComponent } from './car-widget/car-widget.component';
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 import { CartDetailComponent } from './cart-detail/cart-detail.component';
@@ -20,6 +21,11 @@ import { StoreModule } from '@ngrx/store';
 import { articlesInCartReducer } from './update.reducer';
 
 >>>>>>> Stashed changes
+=======
+import { CartDetailComponent } from './cart-detail/cart-detail.component';
+import { FormsModule } from '@angular/forms';
+
+>>>>>>> feature/purchase
 
 @NgModule({
   declarations: [
@@ -31,12 +37,14 @@ import { articlesInCartReducer } from './update.reducer';
     ProductDetailComponent,
     CategoriesMenuComponent,
     ProductListComponent,
-    CarWidgetComponent
+    CarWidgetComponent,
+    CartDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     NgbModule
 =======
@@ -44,6 +52,10 @@ import { articlesInCartReducer } from './update.reducer';
     FormsModule,
     StoreModule.forRoot({ articlesInCartNumberStore: articlesInCartReducer })
 >>>>>>> Stashed changes
+=======
+    NgbModule,
+    FormsModule
+>>>>>>> feature/purchase
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,15 +8,21 @@ export class Product {
     categories: Array<Category>
     description: Description;
     image: Image;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     images: Array<Image>
 =======
+=======
+>>>>>>> feature/purchase
     images: Array<Image>;
     quantity: number;
     quantityOrderMaximum: number;
     quantityOrderMinimum: number;
+<<<<<<< HEAD
     displaySubTotal: string;
 >>>>>>> Stashed changes
+=======
+>>>>>>> feature/purchase
 
     constructor() {
         this.id = 0;
@@ -25,6 +31,7 @@ export class Product {
         this.description = new Description();
         this.image = new Image();
         this.images = [];
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
         this.quantity = 0;
@@ -32,6 +39,11 @@ export class Product {
         this.quantityOrderMinimum = 0;
         this.displaySubTotal = "";
 >>>>>>> Stashed changes
+=======
+        this.quantity = 0;
+        this.quantityOrderMaximum = 0;
+        this.quantityOrderMinimum = 0;
+>>>>>>> feature/purchase
     }
 
 }

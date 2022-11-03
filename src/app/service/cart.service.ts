@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { AppSettings } from '../app.settings';
+import { PersistableShoppingCartItem } from '../models/PersistableShoppingCartItem.model';
 
 @Injectable({
   providedIn: 'root'
@@ -27,8 +28,11 @@ export class CartService {
     return firstValueFrom(this.httpClient.get(`${this.Url}cart/${cartCode}`))
   }
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> feature/purchase
   saveCodeCart(cartCode: string) {
     var cart = sessionStorage.setItem('cartCode', cartCode)
     return cartCode;
@@ -41,6 +45,11 @@ export class CartService {
     } else {
       return firstValueFrom(this.httpClient.put(`${this.Url}cart/${cartCode}`, product))
     }
+<<<<<<< HEAD
   }
 >>>>>>> Stashed changes
+=======
+
+  }
+>>>>>>> feature/purchase
 }
