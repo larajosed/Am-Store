@@ -27,4 +27,20 @@ export class CartService {
     return firstValueFrom(this.httpClient.get(`${this.Url}cart/${cartCode}`))
   }
 
+<<<<<<< Updated upstream
+=======
+  saveCodeCart(cartCode: string) {
+    var cart = sessionStorage.setItem('cartCode', cartCode)
+    return cartCode;
+  }
+
+  addProductToCart(product: PersistableShoppingCartItem): Promise<any> {
+    var cartCode = this.getCartCode()
+    if (cartCode == null) {
+      return firstValueFrom(this.httpClient.post(`${this.Url}cart`, product))
+    } else {
+      return firstValueFrom(this.httpClient.put(`${this.Url}cart/${cartCode}`, product))
+    }
+  }
+>>>>>>> Stashed changes
 }

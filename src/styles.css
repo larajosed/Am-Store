@@ -3,3 +3,7 @@
 h1 {
     font-family: 'Quicksand', sans-serif;
 }
+
+body {
+    padding-bottom: 10%;
+}

@@ -3,9 +3,11 @@ export class Description {
     description: string;
     friendlyUrl: string;
 
+
     constructor() {
         this.name = "";
         this.description = "";
         this.friendlyUrl = "";
+
     }
 }
