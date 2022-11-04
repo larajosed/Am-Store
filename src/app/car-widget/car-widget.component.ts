@@ -11,39 +11,22 @@ import { updateArticlesNumber } from '../update.actions';
   styleUrls: ['./car-widget.component.css']
 })
 export class CarWidgetComponent implements OnInit {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
 
->>>>>>> feature/purchase
   productNumber: Number;
 
-  constructor(private cartService: CartService) {
-    this.productNumber = 0
-=======
-
-  productNumber: number = 0;
-
   constructor(private cartService: CartService, private storeArticlesQuantity: Store<any>) {
+    this.productNumber = 0
     this.storeArticlesQuantity.select('articlesInCartNumberStore').subscribe(data => {
       this.productNumber = data.articlesQuantity
     })
->>>>>>> Stashed changes
   }
 
   ngOnInit(): void {
     var optionalPromise = this.cartService.retrieveCartData();
     if (optionalPromise !== null) {
       optionalPromise.then(res => {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-        this.productNumber = res.products.length
-=======
-        this.storeArticlesQuantity.dispatch(updateArticlesNumber({ articlesQuantity: res.quantity }));
->>>>>>> Stashed changes
-=======
         this.productNumber = res.quantity;
->>>>>>> feature/purchase
+        this.storeArticlesQuantity.dispatch(updateArticlesNumber({ articlesQuantity: res.quantity }));
       })
     }
   }

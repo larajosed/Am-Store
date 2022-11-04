@@ -28,11 +28,6 @@ export class CartService {
     return firstValueFrom(this.httpClient.get(`${this.Url}cart/${cartCode}`))
   }
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> feature/purchase
   saveCodeCart(cartCode: string) {
     var cart = sessionStorage.setItem('cartCode', cartCode)
     return cartCode;
@@ -45,11 +40,6 @@ export class CartService {
     } else {
       return firstValueFrom(this.httpClient.put(`${this.Url}cart/${cartCode}`, product))
     }
-<<<<<<< HEAD
   }
->>>>>>> Stashed changes
-=======
 
-  }
->>>>>>> feature/purchase
 }
