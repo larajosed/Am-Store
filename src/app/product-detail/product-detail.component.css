@@ -13,10 +13,11 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    color: var(--color-font-tittle);
 }
 
 .detail h1 {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--color-font-tittle);
 }
 
 img {
@@ -24,4 +25,11 @@ img {
     max-width: 400px;
     margin-top: 20px;
 
+}
+
+.btn-primary {
+    background-color: var(--btn-bg-primary);
+    border-radius: 0;
+    border: none;
+    margin-top: 4px;
 }

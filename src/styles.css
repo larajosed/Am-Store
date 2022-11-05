@@ -1,9 +1,26 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
-h1 {
-    font-family: 'Quicksand', sans-serif;
+* {
+    font-family: noto-sans;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'quicksand', sans-serif;
+    font-weight: bold;
 }
 
 body {
     padding-bottom: 10%;
+}
+
+
+.btn-primary {
+    background-color: var(--btn-bg-primary);
+    border-radius: 0;
+    border: none;
+    margin-top: 4px;
 }
