@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { AppSettings } from '../app.settings';
@@ -19,7 +19,6 @@ export class CartService {
     return sessionStorage.getItem('cartCode')
   }
 
-
   retrieveCartData(): Promise<any> | null {
     var cartCode = this.getCartCode()
     if (cartCode == null) {
@@ -33,6 +32,10 @@ export class CartService {
     return cartCode;
   }
 
+  deleteCodeCart() {
+    return sessionStorage.removeItem('cartCode');
+  }
+
   addProductToCart(product: PersistableShoppingCartItem): Promise<any> {
     var cartCode = this.getCartCode()
     if (cartCode == null) {
@@ -42,4 +45,8 @@ export class CartService {
     }
   }
 
+  deleteProductToCart(idProduct: number): Promise<any> {
+    var cartCode = this.getCartCode()
+    return firstValueFrom(this.httpClient.delete(`${this.Url}cart/${cartCode}/product/${idProduct}`, { params: { body: true } }))
+  }
 }
