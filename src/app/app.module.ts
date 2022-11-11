@@ -8,7 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductsCarouselComponent } from './products-carousel/products-carousel.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoriesMenuComponent } from './categories-menu/categories-menu.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CarWidgetComponent } from './car-widget/car-widget.component';

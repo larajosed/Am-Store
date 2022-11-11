@@ -1,5 +1,3 @@
-.container {}
-
 .products-flex-container {
     display: flex;
     justify-content: center;
@@ -23,7 +21,7 @@
     max-height: 144px;
 }
 
-.productsText {
+.products-text {
     font-style: normal;
     border-top: 1px solid var(--btn-bg-primary);
     text-align: center;
@@ -32,21 +30,21 @@
     color: var(--color-font-tittle);
 }
 
-.productsText h2 {
+.products-text h2 {
     font-size: medium;
     font-weight: 600;
 }
 
-.productsText div {
+.products-text div {
     font-size: small;
 }
 
-.flexTotalProducts {
+.flex-total-products {
     display: flex;
     justify-content: end;
 }
 
-.totalProducts {
+.total-products {
     margin-top: 15px;
     font-style: normal;
     width: 214px;
@@ -56,7 +54,7 @@
 
 }
 
-.totalProducts h2 {
+.total-products h2 {
     font-size: medium;
     margin-top: 3px;
     font-weight: 600;
@@ -84,7 +82,27 @@ h3 {
 
 .bi-cart-plus {
     font-size: x-large;
-    left: 837px;
-    position: absolute;
     color: var(---color-font-tittle);
+}
+
+.content-icon-cart {
+    text-align: center;
+}
+
+.flex-modal-container {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-aceptar {
+    padding: 15px;
+
+}
+
+.modal-cancelar {
+    padding: 15px;
 }

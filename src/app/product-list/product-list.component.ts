@@ -26,7 +26,6 @@ export class ProductListComponent implements OnInit {
       }
       this.categoriesService.getCategoryByFriendlyUrl(friendlyUrl).then(res => {
         let id = res.id;
-        console.log(id);
         this.productService.getByCategory(id).then(res => {
           this.arrProducts = res.products;
         })

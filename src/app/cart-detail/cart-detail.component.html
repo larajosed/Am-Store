@@ -4,17 +4,34 @@
             <div class="image">
                 <img [src]="product.image.imageUrl" alt="">
             </div>
-            <div class="productsText">
+            <div class="products-text">
                 <h2>{{product.description.name}}</h2>
                 <div>Cantidad: {{product.quantity}}</div>
                 <div>Total: ${{product.price}}</div>
                 <div>Subtotal: {{product.displaySubTotal}}</div>
-                <i class="bi bi-x-lg" id="botonEliminar" (click)="deleteProduct(product.id)"></i>
+                <i class="bi bi-x-lg" id="botonEliminar" (click)="open(modalContent)
+                "></i>
             </div>
+            <ng-template #modalContent let-modal>
+                <div class="modal-body">
+                    ¿ Desea eliminar este artículo ?
+                </div>
+                <div class="flex-modal-container">
+                    <div class="modal-aceptar">
+                        <button type="button" class="btn btn-primary"
+                            (click)="deleteProduct(product.id)">Aceptar</button>
+                    </div>
+                    <div class="modal-cancelar">
+                        <button type="button" class="btn btn-primary" (click)="modal.close()">Cancelar</button>
+                    </div>
+                </div>
+
+            </ng-template>
         </div>
     </div>
-    <div class="flexTotalProducts">
-        <div class="totalProducts">
+
+    <div class="flex-total-products">
+        <div class="total-products">
             <h2>Cantidad de productos: {{cart.quantity}}</h2>
             <h2>Total: {{cart.displayTotal}}</h2>
             <h2>Subtotal: {{cart.displaySubTotal}}</h2>
@@ -22,9 +39,9 @@
         </div>
     </div>
 </div>
-<ng-template #showMessage class="showMessage">
+<ng-template #showMessage class="show-message">
     <h3>No hay artículos en el carrito.</h3>
-    <div [routerLink]="['/home']">
+    <div class="content-icon-cart" [routerLink]="['/home']">
         <i class="bi bi-cart-plus"></i>
     </div>
 </ng-template>

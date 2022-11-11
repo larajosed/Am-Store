@@ -1,9 +1,12 @@
-.list_categories {
-    list-style: none;
-    text-align: left;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: 'Quicksand', sans-serif;
+.list-categories {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-principal);
+}
+
+.list-categories a {
+    text-decoration: none;
+    color: var(---color-font-tittle);
 }
 
 .categories {
@@ -12,6 +15,16 @@
     font-size: 16px;
 }
 
-.categories:hover {
-    color: rgb(186, 178, 178);
+.content-a {
+    margin: 4px 0px;
+    margin-right: 8px;
+    border: 1px solid;
+    padding: 5px;
+    font-family: noto-sans;
+}
+
+.content-a:hover {
+    background-color: var(--color-principal);
+    transition: 1s;
+    color: rgba(57, 31, 31, 0.608);
 }
