@@ -28,3 +28,9 @@
     transition: 1s;
     color: rgba(57, 31, 31, 0.608);
 }
+
+.active {
+    background-color: var(--color-principal);
+    color: black;
+    border: none;
+}

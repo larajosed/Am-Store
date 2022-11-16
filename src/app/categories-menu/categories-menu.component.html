@@ -1,6 +1,7 @@
 <div class="categories">
     <div class="list-categories">
-        <div class="content-a" *ngFor="let category of categories">
+        <div class="content-a" *ngFor="let category of categories"
+            [ngClass]="{'active': category.description.friendlyUrl == categorySelected}">
             <a [routerLink]="['/',category.description.friendlyUrl]">{{category.description.name}}</a>
         </div>
     </div>

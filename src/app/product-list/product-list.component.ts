@@ -20,7 +20,6 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(paramMap => {
       let friendlyUrl = paramMap.get('categoryFriendlyUrl');
-      console.log(friendlyUrl);
       if (friendlyUrl == null) {
         return
       }
